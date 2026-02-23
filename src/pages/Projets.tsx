@@ -161,9 +161,9 @@ const Projets = () => {
       image: "/images/cortex-xdr.png", // Chemin vers votre image
       technologies: [],
       documents: [
-        { nom: "Contexte Installation Agent XDR", chemin: "/documents/Contexte.pdf" },
-        { nom: "Documentation Installation agent Cortex XDR", chemin: "/documents/Documentation-installation-agent-Cortex-XDR-version-censure.pdf" },
-        { nom: "FRP Cortex XDR", chemin: "/documents/FRP-Cortex-XDR-Robin-Longuet.pdf" },
+        { nom: "Contexte Installation Agent XDR", chemin: "/documents/projet_XDR/Contexte.pdf" },
+        { nom: "Documentation Installation agent Cortex XDR", chemin: "/documents/projet_XDR/Documentation-installation-agent-Cortex-XDR-version-censure.pdf" },
+        { nom: "FRP Cortex XDR", chemin: "/documents/projet_XDR/FRP-Cortex-XDR-Robin-Longuet.pdf" },
       ],
     },
     {
@@ -173,8 +173,8 @@ const Projets = () => {
       image: "/images/sdis.png", // Chemin vers votre image
       technologies: [],
       documents: [
-        { nom: "Document de traitement de ticket", chemin: "/documents/Doc-traitement-de-tickets-droits-informatique.pdf" },
-        { nom: "FRP Traitement de ticket", chemin: "/documents/FRP-ticketing-Longuet-Robin.pdf" },
+        { nom: "Document de traitement de ticket", chemin: "/documents/projet_Ticketing/Doc-traitement-de-tickets-droits-informatique.pdf" },
+        { nom: "FRP Traitement de ticket", chemin: "/documents/projet_Ticketing/FRP-ticketing-Longuet-Robin.pdf" },
       ],
     },
     //{

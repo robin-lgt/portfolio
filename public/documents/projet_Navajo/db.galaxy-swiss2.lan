@@ -1,0 +1,21 @@
+;
+; BIND data file for local loopback interface
+;
+$TTL	604800
+@	IN	SOA	REZOLAB.galaxy-swiss2.lan. root.galaxy-swiss2.lan. (
+			      1		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+@		IN	NS	REZOLAB.galaxy-swiss2.lan.
+
+
+rezolab		IN	A	172.16.0.10
+mutlab		IN      A	172.16.0.1
+extralab	IN	A	172.18.2.2
+proxylab	IN	A	172.18.2.30
+certilab	IN	A	172.16.0.40
+
+www		IN	CNAME	extralab

@@ -29,7 +29,7 @@ const Certificat = () => {
     {
       id: "netacad",
       nom: "NetAcad",
-      description: "Cisco NetAcadIntroduction à la cybersécurité",
+      description: "Cisco Netacad",
       pdf: "/Attestation_Netacad.pdf",
       logo: "https://www.netacad.com/sites/default/files/2020-09/cisco-netacad-logo.png",
       couleur: "from-cyan-500 to-cyan-700",
