@@ -46,12 +46,12 @@ const Alternance = () => {
             <Briefcase className="text-primary" size={28} />
             <h3 className="text-2xl font-bold">Mes Missions</h3>
           </div>
-          
+
           <div className="space-y-6">
             <div className="border-l-4 border-primary pl-6 py-2">
               <h4 className="font-semibold text-lg mb-2">Administration Serveurs Applicatifs</h4>
               <p className="text-muted-foreground">
-                Maintenance et Installation des serveurs Linux majoritairement mais aussi un peu de Windows. 
+                Maintenance et Installation des serveurs Linux majoritairement mais aussi un peu de Windows.
                 Gestion des utilisateurs et des droits d'accès via Samba AD et LDAP.
               </p>
             </div>
@@ -59,23 +59,23 @@ const Alternance = () => {
             <div className="border-l-4 border-accent pl-6 py-2">
               <h4 className="font-semibold text-lg mb-2">Support Utilisateurs</h4>
               <p className="text-muted-foreground">
-                Assistance technique aux utilisateurs, résolution d'incidents au niveau applicatif et réseau. 
+                Assistance technique aux utilisateurs, résolution d'incidents au niveau applicatif et réseau.
               </p>
             </div>
 
             {//<div className="border-l-4 border-primary pl-6 py-2">
               //<h4 className="font-semibold text-lg mb-2">Sécurité Informatique</h4>
               //<p className="text-muted-foreground">
-                //Mise en place de solutions de sauvegarde et de plan de reprise d'activité. 
-                //Veille sur les failles de sécurité et application des correctifs.
+              //Mise en place de solutions de sauvegarde et de plan de reprise d'activité. 
+              //Veille sur les failles de sécurité et application des correctifs.
               //</p>
-            //</div>
+              //</div>
             }
 
             <div className="border-l-4 border-accent pl-6 py-2">
               <h4 className="font-semibold text-lg mb-2">Documentation</h4>
               <p className="text-muted-foreground">
-                Alimentation de notre application de documentation technique pour les techniciens du GSIC. 
+                Alimentation de notre application de documentation technique pour les techniciens du GSIC.
               </p>
             </div>
 

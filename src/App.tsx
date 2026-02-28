@@ -11,6 +11,7 @@ import Projets from "./pages/Projets";
 import Synthese from "./pages/Synthese";
 import Certificat from "./pages/Certificat";
 import NotFound from "./pages/NotFound";
+import Veille from "./pages/Veille";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +29,7 @@ const App = () => (
               <Route path="/projets" element={<Projets />} />
               <Route path="/synthese" element={<Synthese />} />
               <Route path="/certificat" element={<Certificat />} />
+              <Route path="/veille" element={<Veille />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>

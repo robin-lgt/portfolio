@@ -1,11 +1,17 @@
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { FileText, ExternalLink } from "lucide-react";
+import { FileText, ExternalLink, Folder } from "lucide-react";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 interface Document {
   nom: string;
   chemin: string;
+}
+
+interface DossierDocuments {
+  nom: string;
+  documents: Document[];
 }
 
 interface Projet {
@@ -15,6 +21,7 @@ interface Projet {
   image?: string;
   technologies?: string[];
   documents?: Document[];
+  dossiers?: DossierDocuments[];
 }
 
 interface ProjetCardProps {
@@ -115,26 +122,73 @@ const ProjetCard = ({ projet, index }: ProjetCardProps) => {
             {/* Section Documents joints */}
             <div>
               <h4 className="text-base font-semibold mb-3 text-foreground">Documents joints</h4>
-              {projet.documents && projet.documents.length > 0 ? (
-                <div className="space-y-2">
-                  {projet.documents.map((doc, docIndex) => (
-                    <a
-                      key={docIndex}
-                      href={doc.chemin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-3 p-3 bg-muted/50 hover:bg-muted rounded-lg transition-colors group"
-                    >
-                      <FileText size={18} className="text-primary group-hover:text-primary/80" />
-                      <span className="text-sm text-foreground group-hover:text-primary transition-colors flex-1">
-                        {doc.nom}
-                      </span>
-                      <ExternalLink
-                        size={14}
-                        className="text-muted-foreground group-hover:text-primary transition-colors"
-                      />
-                    </a>
-                  ))}
+              {(projet.documents && projet.documents.length > 0) || (projet.dossiers && projet.dossiers.length > 0) ? (
+                <div className="space-y-4">
+                  {projet.documents && projet.documents.length > 0 && (
+                    <div className="space-y-2">
+                      {projet.documents.map((doc, docIndex) => (
+                        <a
+                          key={`doc-${docIndex}`}
+                          href={doc.chemin}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-3 p-3 bg-muted/50 hover:bg-muted rounded-lg transition-colors group"
+                        >
+                          <FileText size={18} className="text-primary group-hover:text-primary/80" />
+                          <span className="text-sm text-foreground group-hover:text-primary transition-colors flex-1">
+                            {doc.nom}
+                          </span>
+                          <ExternalLink
+                            size={14}
+                            className="text-muted-foreground group-hover:text-primary transition-colors"
+                          />
+                        </a>
+                      ))}
+                    </div>
+                  )}
+
+                  {projet.dossiers && projet.dossiers.length > 0 && (
+                    <Accordion type="single" collapsible className="w-full space-y-2">
+                      {projet.dossiers.map((dossier, dossierIndex) => (
+                        <AccordionItem
+                          key={`dossier-${dossierIndex}`}
+                          value={`dossier-${dossierIndex}`}
+                          className="border-none bg-muted/50 rounded-lg overflow-hidden"
+                        >
+                          <AccordionTrigger className="flex items-center gap-3 p-3 hover:bg-muted transition-colors group hover:no-underline data-[state=open]:bg-muted">
+                            <div className="flex items-center gap-3 flex-1 text-left">
+                              <Folder size={18} className="text-primary group-hover:text-primary/80" />
+                              <span className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">
+                                {dossier.nom}
+                              </span>
+                            </div>
+                          </AccordionTrigger>
+                          <AccordionContent className="pt-2 pb-3 px-4">
+                            <div className="space-y-2 border-l-2 border-primary/20 pl-4 ml-2">
+                              {dossier.documents.map((doc, docIndex) => (
+                                <a
+                                  key={`dossier-${dossierIndex}-doc-${docIndex}`}
+                                  href={doc.chemin}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="flex items-center gap-3 py-2 px-3 hover:bg-muted rounded-md transition-colors group"
+                                >
+                                  <FileText size={16} className="text-muted-foreground group-hover:text-primary/80" />
+                                  <span className="text-sm text-muted-foreground group-hover:text-primary transition-colors flex-1">
+                                    {doc.nom}
+                                  </span>
+                                  <ExternalLink
+                                    size={14}
+                                    className="text-muted-foreground group-hover:text-primary transition-colors"
+                                  />
+                                </a>
+                              ))}
+                            </div>
+                          </AccordionContent>
+                        </AccordionItem>
+                      ))}
+                    </Accordion>
+                  )}
                 </div>
               ) : (
                 <div className="p-4 bg-muted/30 rounded-lg border border-dashed">
@@ -177,14 +231,55 @@ const Projets = () => {
         { nom: "FRP Traitement de ticket", chemin: "/documents/projet_Ticketing/FRP-ticketing-Longuet-Robin.pdf" },
       ],
     },
-    //{
-    //  id: 3,
-    //  titre: "Fortins",
-    //  description: "",
-    //  image: "/images/fortins.jpg", // Chemin vers votre image
-    //  technologies: [],
-    //  documents: [],
-    //},
+    {
+      id: 3,
+      titre: "Fortins",
+      description: "",
+      image: "/images/fortins.png", // Chemin vers votre image
+      technologies: [],
+      documents: [],
+    },
+    {
+      id: 4,
+      titre: "Navajo",
+      description: "Dans le contexte de l'entreprise GSB, nous avons mis en place avec mes camarades une infrastructure réseau composé de 3 sous réseaux dont une DMZ, 2 pfSense, ainsi que 3 serveurs, qui fournissent des services comme DHCP, DNS, Serveur WEB, ainsi qu'une PKI",
+      image: "/images/navajo.png", // Chemin vers votre image
+      technologies: [],
+      documents: [
+        { nom: "FRP Navajo", chemin: "/documents/projet_Navajo/FRP Navajo.pdf" },
+        { nom: "JDB LONGUET Robin", chemin: "/documents/projet_Navajo/JDB LONGUET Robin.pdf" },
+        { nom: "Schéma SR Logique", chemin: "/documents/projet_Navajo/SR Logique.jpg" },
+        { nom: "Table des systèmes", chemin: "/documents/projet_Navajo/Table des systemes equipe 2.ods" },
+        { nom: "Test service DNS et DHCP (PDF)", chemin: "/documents/projet_Navajo/Test service DNS et DHCP.pdf" },
+        { nom: "Trello", chemin: "/documents/projet_Navajo/Trello.pdf" },
+      ],
+      dossiers: [
+        {
+          nom: "Fichiers de configuration",
+          documents: [
+            { nom: "db.172.16.0", chemin: "/documents/projet_Navajo/fichiers_de_conf/db.172.16.0" },
+            { nom: "db.172.18.2", chemin: "/documents/projet_Navajo/fichiers_de_conf/db.172.18.2" },
+            { nom: "db.galaxy-swiss2.lan", chemin: "/documents/projet_Navajo/fichiers_de_conf/db.galaxy-swiss2.lan" },
+            { nom: "dhcpd.conf", chemin: "/documents/projet_Navajo/fichiers_de_conf/dhcpd.conf" },
+            { nom: "dhcpd.leases", chemin: "/documents/projet_Navajo/fichiers_de_conf/dhcpd.leases" },
+            { nom: "named.conf", chemin: "/documents/projet_Navajo/fichiers_de_conf/named.conf" },
+            { nom: "named.conf.default-zones", chemin: "/documents/projet_Navajo/fichiers_de_conf/named.conf.default-zones" },
+            { nom: "named.conf.download", chemin: "/documents/projet_Navajo/fichiers_de_conf/named.conf.download" },
+            { nom: "named.conf.options", chemin: "/documents/projet_Navajo/fichiers_de_conf/named.conf.options" },
+          ]
+        }
+      ]
+    },
+    {
+      id: 6,
+      titre: "Veille et Idendité professionnelle",
+      description: "FRP Validant les conpentences à propos de la gestion de mon identité professionnelle ainsi que mes outils pour effectuer ma veille quotidienne",
+      image: "/images/veille.png",
+      technologies: [],
+      documents: [
+        { nom: "FRP Veille et identité professionnelle", chemin: "/documents/projet_Veille_et_identité/FRP Veille et Identité Professionnel.pdf" },
+      ],
+    }
   ];
 
   return (

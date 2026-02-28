@@ -2,14 +2,6 @@ import { FileText, Download, Linkedin, Mail, Globe, ExternalLink } from "lucide-
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 
-// Sites de veille informatique - Ajoutez ou modifiez vos sites ici
-const SITES_VEILLE = [
-  { nom: "IT Connect", url: "https://www.it-connect.fr/actualites/" },
-  { nom: "CERT-FR", url: "https://www.cert.ssi.gouv.fr" },
-  { nom: "Next", url: "https://www.next.ink" },
-  { nom: "ZDNet France", url: "https://www.zdnet.fr" },
-  { nom: "Hacker News", url: "https://thehackernews.com" },
-];
 
 const Home = () => {
   return (
@@ -40,8 +32,8 @@ const Home = () => {
               Voici mon portfolio qui retrace mes etudes, mon entreprise ainsi que mes projets durant mon alternance.
             </p>
             <div className="flex gap-4 items-center justify-center md:justify-start">
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-md hover:shadow-lg transition-all"
                 asChild
               >
@@ -79,7 +71,7 @@ const Home = () => {
           <h2 className="text-3xl font-bold mb-8 text-center">À Propos</h2>
           <Card className="p-8 bg-card border-border shadow-soft hover:shadow-hover transition-all duration-300">
             <p className="text-muted-foreground leading-relaxed mb-6">
-              Actuellement en BTS Services Informatiques aux Organisations, option Solutions d'Infrastructure, Systèmes et Réseaux (SISR), 
+              Actuellement en BTS Services Informatiques aux Organisations, option Solutions d'Infrastructure, Systèmes et Réseaux (SISR),
               je développe des compétences techniques en administration systèmes et réseaux, virtualisation, et sécurité informatique.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-6">
@@ -93,36 +85,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Veille informatique */}
-      <section className="container mx-auto px-4 py-16">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold mb-8 text-center">Veille informatique</h2>
-          <Card className="p-8 bg-card border-border shadow-soft hover:shadow-hover transition-all duration-300">
-            <div className="flex items-center justify-center gap-4 mb-6">
-              <Globe size={32} className="text-primary" />
-              <h3 className="text-xl font-semibold">Sites interressants</h3>
-            </div>
-            <p className="text-center text-muted-foreground mb-6">
-              Sites pertinants à explorer pour se renseigner sur l'actualité informatique en tout genre, CVE, Innovations, etc.
-            </p>
-            <div className="grid gap-3 sm:grid-cols-1 md:grid-cols-2">
-              {SITES_VEILLE.map((site) => (
-                <a
-                  key={site.url}
-                  href={site.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3 p-4 rounded-lg bg-muted/50 hover:bg-muted border border-transparent hover:border-primary/30 transition-colors group"
-                >
-                  <Globe size={20} className="text-primary shrink-0" />
-                  <span className="text-sm font-medium flex-1 group-hover:text-primary transition-colors">{site.nom}</span>
-                  <ExternalLink size={14} className="text-muted-foreground shrink-0" />
-                </a>
-              ))}
-            </div>
-          </Card>
-        </div>
-      </section>
 
       {/* CV Section */}
       <section className="container mx-auto px-4 py-16">

@@ -12,6 +12,7 @@ const Navbar = () => {
     { to: "/projets", label: "Projets" },
     { to: "/certificat", label: "Certificats" },
     { to: "/synthese", label: "Synthèse" },
+    { to: "/veille", label: "Veille" },
   ];
 
   return (
@@ -19,8 +20,8 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <NavLink 
-            to="/" 
+          <NavLink
+            to="/"
             className="text-xl font-semibold text-foreground hover:text-primary transition-colors"
           >
             Portfolio Robin Longuet
