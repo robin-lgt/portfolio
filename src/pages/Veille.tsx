@@ -1,4 +1,4 @@
-import { ExternalLink, Globe, Rss, Shield, BrainCircuit, Search, Zap, Code, Lightbulb } from "lucide-react";
+import { ExternalLink, Globe, Rss, Shield, Server, Search, Zap, Code, Lightbulb } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 
@@ -49,10 +49,10 @@ const Veille = () => {
                             </p>
                         </Card>
                         <Card className="p-6 bg-card border-border hover:border-primary/50 hover:shadow-hover transition-all duration-300">
-                            <BrainCircuit className="w-10 h-10 text-blue-500 mb-4" />
-                            <h3 className="text-xl font-semibold mb-2">Cloud & Infra</h3>
+                            <Server className="w-10 h-10 text-blue-500 mb-4" />
+                            <h3 className="text-xl font-semibold mb-2">Administration Système</h3>
                             <p className="text-muted-foreground text-sm">
-                                Nouveautés AWS/Azure, virtualisation (Proxmox/VMware), outils de conteneurisation (Docker, Kubernetes).
+                                Actualité générale sur les outils ou services très utilisés en en tant qu'administrateur système.
                             </p>
                         </Card>
                         <Card className="p-6 bg-card border-border hover:border-primary/50 hover:shadow-hover transition-all duration-300">
@@ -66,7 +66,7 @@ const Veille = () => {
                             <Lightbulb className="w-10 h-10 text-yellow-500 mb-4" />
                             <h3 className="text-xl font-semibold mb-2">Innovation & Nouveautés</h3>
                             <p className="text-muted-foreground text-sm">
-                                Nouvelles technologies, Intelligence Artificielle, et tendances émergentes du monde de l'IT.
+                                Nouvelles technologies en tout genre, Intelligence Artificielle.
                             </p>
                         </Card>
                     </div>

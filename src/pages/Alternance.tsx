@@ -51,8 +51,8 @@ const Alternance = () => {
             <div className="border-l-4 border-primary pl-6 py-2">
               <h4 className="font-semibold text-lg mb-2">Administration Serveurs Applicatifs</h4>
               <p className="text-muted-foreground">
-                Maintenance et Installation des serveurs Linux majoritairement mais aussi un peu de Windows.
-                Gestion des utilisateurs et des droits d'accès via Samba AD et LDAP.
+                Maintenance et Installation des serveurs.
+                Gestion des utilisateurs et des droits d'accès par Samba AD et LDAP.
               </p>
             </div>
 
@@ -91,10 +91,10 @@ const Alternance = () => {
               "Active Directory",
               "VMware",
               "Firewall",
-              "VPN",
               "Backup & Recovery",
               "Bash",
               "Ticketing",
+              "Certificats",
             ].map((skill) => (
               <Badge
                 key={skill}

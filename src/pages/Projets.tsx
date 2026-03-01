@@ -20,6 +20,7 @@ interface Projet {
   description: string;
   image?: string;
   technologies?: string[];
+  sousCompetences?: string[];
   documents?: Document[];
   dossiers?: DossierDocuments[];
 }
@@ -104,6 +105,20 @@ const ProjetCard = ({ projet, index }: ProjetCardProps) => {
                 )}
               </div>
             </div>
+
+            {/* Section Sous-compétences */}
+            {projet.sousCompetences && projet.sousCompetences.length > 0 && (
+              <div>
+                <h4 className="text-base font-semibold mb-2 text-foreground">Sous-compétences associées</h4>
+                <div className="flex flex-wrap gap-2">
+                  {projet.sousCompetences.map((comp) => (
+                    <Badge key={comp} variant="outline" className="text-xs border-primary/20 bg-primary/5 text-primary">
+                      {comp}
+                    </Badge>
+                  ))}
+                </div>
+              </div>
+            )}
 
             {/* Section Technologies */}
             {projet.technologies && projet.technologies.length > 0 && (
@@ -211,9 +226,10 @@ const Projets = () => {
     {
       id: 1,
       titre: "Installation Agent Cortex XDR",
-      description: "Dans ce projet, vous allez suivre comment j'ai installée cortex XDR sur des serveurs Linux du SDIS. Certaint un des livrables noté dans la FRP n'est pas présent sur ce Portfolio pour cause de confidentialité.",
+      description: "Dans ce projet, vous allez suivre la procedure d'installation d'agent Cortex XDR sur des serveurs Linux du SDIS. Certain un des livrables noté dans la FRP n'est pas présent sur ce Portfolio pour cause de confidentialité.",
       image: "/images/cortex-xdr.png", // Chemin vers votre image
-      technologies: [],
+      technologies: ["Palo Alto Cortex XDR"],
+      sousCompetences: ["1.1.1", "1.4.1", "1.5.1", "1.5.2"],
       documents: [
         { nom: "Contexte Installation Agent XDR", chemin: "/documents/projet_XDR/Contexte.pdf" },
         { nom: "Documentation Installation agent Cortex XDR", chemin: "/documents/projet_XDR/Documentation-installation-agent-Cortex-XDR-version-censure.pdf" },
@@ -226,6 +242,7 @@ const Projets = () => {
       description: "Voici comment nous traitons un ticket de demande de mise à jour de droits informatique au SDIS 33. Certaint des livrables noté dans la FRP ne sont pas présent sur ce Portfolio pour cause de confidentialité.",
       image: "/images/sdis.png", // Chemin vers votre image
       technologies: [],
+      sousCompetences: ["1.1.3", "1.2.2"],
       documents: [
         { nom: "Document de traitement de ticket", chemin: "/documents/projet_Ticketing/Doc-traitement-de-tickets-droits-informatique.pdf" },
         { nom: "FRP Traitement de ticket", chemin: "/documents/projet_Ticketing/FRP-ticketing-Longuet-Robin.pdf" },
@@ -236,7 +253,8 @@ const Projets = () => {
       titre: "Fortins",
       description: "",
       image: "/images/fortins.png", // Chemin vers votre image
-      technologies: [],
+      technologies: ["Apache 2", "PHP", "MariaDB"],
+      sousCompetences: [],
       documents: [],
     },
     {
@@ -244,13 +262,14 @@ const Projets = () => {
       titre: "Navajo",
       description: "Dans le contexte de l'entreprise GSB, nous avons mis en place avec mes camarades une infrastructure réseau composé de 3 sous réseaux dont une DMZ, 2 pfSense, ainsi que 3 serveurs, qui fournissent des services comme DHCP, DNS, Serveur WEB, ainsi qu'une PKI",
       image: "/images/navajo.png", // Chemin vers votre image
-      technologies: [],
+      technologies: ["DHCP", "DNS Bind"],
+      sousCompetences: ["1.4.2", "1.5.1", "1.5.2",],
       documents: [
         { nom: "FRP Navajo", chemin: "/documents/projet_Navajo/FRP Navajo.pdf" },
-        { nom: "JDB LONGUET Robin", chemin: "/documents/projet_Navajo/JDB LONGUET Robin.pdf" },
-        { nom: "Schéma SR Logique", chemin: "/documents/projet_Navajo/SR Logique.jpg" },
-        { nom: "Table des systèmes", chemin: "/documents/projet_Navajo/Table des systemes equipe 2.ods" },
-        { nom: "Test service DNS et DHCP (PDF)", chemin: "/documents/projet_Navajo/Test service DNS et DHCP.pdf" },
+        { nom: "Journal de bord", chemin: "/documents/projet_Navajo/JDB LONGUET Robin.pdf" },
+        { nom: "Schéma réseau logique", chemin: "/documents/projet_Navajo/SR Logique.jpg" },
+        { nom: "Table des systèmes", chemin: "/documents/projet_Navajo/Table des systemes equipe 2.pdf" },
+        { nom: "Test service DNS et DHCP", chemin: "/documents/projet_Navajo/Test service DNS et DHCP.pdf" },
         { nom: "Trello", chemin: "/documents/projet_Navajo/Trello.pdf" },
       ],
       dossiers: [
@@ -276,8 +295,21 @@ const Projets = () => {
       description: "FRP Validant les conpentences à propos de la gestion de mon identité professionnelle ainsi que mes outils pour effectuer ma veille quotidienne",
       image: "/images/veille.png",
       technologies: [],
+      sousCompetences: ["1.6.1", "1.6.2"],
       documents: [
         { nom: "FRP Veille et identité professionnelle", chemin: "/documents/projet_Veille_et_identité/FRP Veille et Identité Professionnel.pdf" },
+      ],
+    },
+    {
+      id: 7,
+      titre: "Serva",
+      description: "Mise en place de l'application Serva pour en faire un serveur PXE",
+      image: "/images/serva.png",
+      technologies: ["Serva", "PXE"],
+      sousCompetences: ["1.5.2"],
+      documents: [
+        { nom: "FRP Serva", chemin: "/documents/projet_Serva/FRP Serva.pdf" },
+        { nom: "Documentation serva", chemin: "/documents/projet_Serva/Documentation Serva.pdf" },
       ],
     }
   ];

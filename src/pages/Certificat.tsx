@@ -11,7 +11,7 @@ const Certificat = () => {
     {
       id: "cnil",
       nom: "Atelier RGPD",
-      description: "MOOC CNIL - Atelier RGPD",
+      description: "",
       pdf: "/Attestation_MOOC_CNIL.pdf",
       logo: "https://www.cnil.fr/sites/default/files/atoms/image/logo_cnil_2021.png",
       couleur: "from-blue-500 to-blue-700",
@@ -20,7 +20,7 @@ const Certificat = () => {
     {
       id: "anssi",
       nom: "SecNum Académie",
-      description: "ANSSI - SecNum Académie",
+      description: "",
       pdf: "/Attestation_ANSSI.pdf",
       logo: "https://www.ssi.gouv.fr/uploads/2020/01/anssi-logo-2019.png",
       couleur: "from-red-600 to-red-800",
@@ -29,7 +29,7 @@ const Certificat = () => {
     {
       id: "netacad",
       nom: "NetAcad",
-      description: "Cisco Netacad",
+      description: "",
       pdf: "/Attestation_Netacad.pdf",
       logo: "https://www.netacad.com/sites/default/files/2020-09/cisco-netacad-logo.png",
       couleur: "from-cyan-500 to-cyan-700",
