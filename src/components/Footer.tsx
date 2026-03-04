@@ -6,7 +6,7 @@ const Footer = () => {
     { to: "/", label: "Accueil" },
     { to: "/alternance", label: "Alternance" },
     { to: "/projets", label: "Projets" },
-    { to: "/certificat", label: "Certificats" },
+    { to: "/certificat", label: "Certifications" },
     { to: "/synthese", label: "Synthèse" },
   ];
 
@@ -32,8 +32,8 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-8 text-sm text-muted-foreground">
             <div className="flex items-center gap-2">
               <Mail size={16} className="text-primary" />
-              <a 
-                href="mailto:robin.longuet@example.com" 
+              <a
+                href="mailto:robin.longuet@example.com"
                 className="hover:text-primary transition-colors"
               >
                 roblonguet@gmail.com

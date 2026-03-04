@@ -59,7 +59,7 @@ const Alternance = () => {
             <div className="border-l-4 border-accent pl-6 py-2">
               <h4 className="font-semibold text-lg mb-2">Support Utilisateurs</h4>
               <p className="text-muted-foreground">
-                Assistance technique aux utilisateurs, résolution d'incidents au niveau applicatif et réseau.
+                Assistance technique aux utilisateurs et collègues, résolution d'incidents au niveau applicatif.
               </p>
             </div>
 

@@ -78,7 +78,7 @@ const Home = () => {
               Je suis à coté en alternance au SDIS (Service Départemental d'Incendie et de Secours) de la Gironde à Bordeaux où je participe à la gestion des serveurs au BHI (Bureau Hébergement des Infrastructures).
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              J'ai pour Objectif pour l'année prochaine d'aller en License Pro ADSILLH à l'université de Bordeaux, esperant pouvoir rester dans mon entreprise.
+              J'ai pour Objectif l'année prochaine de rejoindre la License Pro ADSILLH à l'université de Bordeaux, ésperant pouvoir rester dans mon entreprise.
               Et ensuite je continuerais probablement sur un Master pour la fin de mes etudes mais je n'ai pas encore fait de choix.
             </p>
           </Card>

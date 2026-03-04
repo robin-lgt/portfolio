@@ -51,7 +51,7 @@ const Certificat = () => {
         {/* Header */}
         <div className="text-center mb-16 animate-slide-up">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 text-primary">
-            Mes Certificats
+            Mes Certifications
           </h1>
           <p className="text-lg text-muted-foreground">
             Attestations de formation MOOC et certifications obtenues

@@ -226,7 +226,7 @@ const Projets = () => {
     {
       id: 1,
       titre: "Installation Agent Cortex XDR",
-      description: "Dans ce projet, vous allez suivre la procedure d'installation d'agent Cortex XDR sur des serveurs Linux du SDIS. Certain un des livrables noté dans la FRP n'est pas présent sur ce Portfolio pour cause de confidentialité.",
+      description: "Dans ce projet, vous allez suivre la procedure d'installation d'agent Cortex XDR sur des serveurs Linux du SDIS.",
       image: "/images/cortex-xdr.png", // Chemin vers votre image
       technologies: ["Palo Alto Cortex XDR"],
       sousCompetences: ["1.1.1", "1.4.1", "1.5.1", "1.5.2"],
@@ -239,7 +239,7 @@ const Projets = () => {
     {
       id: 2,
       titre: "Traitement de ticket pour mise à jour de droits informatique au SDIS",
-      description: "Voici comment nous traitons un ticket de demande de mise à jour de droits informatique au SDIS 33. Certaint des livrables noté dans la FRP ne sont pas présent sur ce Portfolio pour cause de confidentialité.",
+      description: "Voici comment nous traitons un ticket de demande de mise à jour de droits informatique au SDIS 33. Certain des livrables noté dans la FRP ne sont pas présent sur ce Portfolio pour cause de confidentialité.",
       image: "/images/sdis.png", // Chemin vers votre image
       technologies: [],
       sousCompetences: ["1.1.3", "1.2.2"],
@@ -265,6 +265,7 @@ const Projets = () => {
       technologies: ["DHCP", "DNS Bind"],
       sousCompetences: ["1.4.2", "1.5.1", "1.5.2",],
       documents: [
+        { nom: "AP 3.1 Navajo énoncé", chemin: "/documents/projet_Navajo/ap3.1 Navajo 2025 CDC v6.pdf" },
         { nom: "FRP Navajo", chemin: "/documents/projet_Navajo/FRP Navajo.pdf" },
         { nom: "Journal de bord", chemin: "/documents/projet_Navajo/JDB LONGUET Robin.pdf" },
         { nom: "Schéma réseau logique", chemin: "/documents/projet_Navajo/SR Logique.jpg" },
@@ -289,19 +290,30 @@ const Projets = () => {
         }
       ]
     },
+    //{
+    //id: 5,
+    //titre: "Outil et solution mise en place pour la veille informatique",
+    //description: "FRP Validant les conpentences à propos de mes outils pour effectuer ma veille quotidienne",
+    //image: "/images/veille.png",
+    //technologies: [],
+    //sousCompetences: ["1.6.2"],
+    //documents: [
+    //  { nom: "FRP Veille informatique", chemin: "/documents/projet_Veille_et_identité/FRP Veille et Identité Professionnel.pdf" },
+    //],
+    //},
     {
-      id: 6,
-      titre: "Veille et Idendité professionnelle",
-      description: "FRP Validant les conpentences à propos de la gestion de mon identité professionnelle ainsi que mes outils pour effectuer ma veille quotidienne",
-      image: "/images/veille.png",
-      technologies: [],
-      sousCompetences: ["1.6.1", "1.6.2"],
+      id: 5,
+      titre: "Gestion de l'idendité professionnelle",
+      description: "FRP Validant les conpentences à propos de la gestion de mon identité professionnelle",
+      image: "/images/identité_pro.png",
+      technologies: ["LinkedIn"],
+      sousCompetences: ["1.6.3"],
       documents: [
-        { nom: "FRP Veille et identité professionnelle", chemin: "/documents/projet_Veille_et_identité/FRP Veille et Identité Professionnel.pdf" },
+        { nom: "FRP identité professionnelle", chemin: "/documents/projet_Identité_pro/FRP Identité pro Robin Longuet.pdf" },
       ],
     },
     {
-      id: 7,
+      id: 6,
       titre: "Serva",
       description: "Mise en place de l'application Serva pour en faire un serveur PXE",
       image: "/images/serva.png",
@@ -310,6 +322,18 @@ const Projets = () => {
       documents: [
         { nom: "FRP Serva", chemin: "/documents/projet_Serva/FRP Serva.pdf" },
         { nom: "Documentation serva", chemin: "/documents/projet_Serva/Documentation Serva.pdf" },
+      ],
+    },
+    {
+      id: 7,
+      titre: "Présence en ligne du SDIS 33",
+      description: "FRP Montrant la présence en ligne du SDIS 33 sur les differentes plateformes, Web et Réseaux Sociaux",
+      image: "/images/presence_en_ligne.png",
+      technologies: ["HTTPS", "LinkedIn", "Instagram", "Facebook", "Youtube"],
+      sousCompetences: ["1.3.2"],
+      documents: [
+        { nom: "La présence en ligne du SDIS 33", chemin: "/documents/projet_présence_en_ligne/presence en ligne.pdf" },
+        { nom: "FRP présence en ligne", chemin: "/documents/projet_présence_en_ligne/FRP presence en ligne.pdf" },
       ],
     }
   ];
