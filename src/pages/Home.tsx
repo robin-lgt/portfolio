@@ -96,7 +96,7 @@ const Home = () => {
               <h3 className="text-xl font-semibold">Curriculum Vitae</h3>
             </div>
             <p className="text-center text-muted-foreground mb-6">
-              Consultez mon CV complet pour découvrir mon parcours, mes formations et mes compétences techniques.
+              Consultez mon CV complet pour découvrir mon parcours et mes formations.
             </p>
             <div className="aspect-[8.5/11] w-full bg-background rounded-lg border-2 border-dashed border-border overflow-hidden">
               <iframe

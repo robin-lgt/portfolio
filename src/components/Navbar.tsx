@@ -12,7 +12,7 @@ const Navbar = () => {
     { to: "/projets", label: "Projets" },
     { to: "/certificat", label: "Certifications" },
     { to: "/synthese", label: "Synthèse" },
-    { to: "/veille", label: "Veille" },
+    // { to: "/veille", label: "Veille" },
   ];
 
   return (

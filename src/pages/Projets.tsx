@@ -251,11 +251,31 @@ const Projets = () => {
     {
       id: 3,
       titre: "Fortins",
-      description: "",
+      description: "Dans le contexte de la maison des ligues de Lorraine, nous avons avec mes camarades mis en place une infrastructure composé de 1 serveur Web contenant un application lié à une base de données, 1 serveur LDAP qui fera aussi de l'archivage de l'application Web, ainsi que 2 pfSense conprennant du DNS, DHCP, VPN et PKI",
       image: "/images/fortins.png", // Chemin vers votre image
       technologies: ["Apache 2", "PHP", "MariaDB"],
-      sousCompetences: [],
-      documents: [],
+      sousCompetences: ["1.4.2", "1.5.1", "1.5.2"],
+      documents: [
+        { nom: "AP 4.1 Fortins énoncé", chemin: "/documents/projet_Fortins/ap4.1 Fortins 2026 CDC v5.pdf" },
+        { nom: "FRP Fortins", chemin: "/documents/projet_Fortins/FRP Fortins.pdf" },
+        { nom: "Journal de bord", chemin: "/documents/projet_Fortins/JDB - LONGUET Robin.pdf" },
+        { nom: "Schéma réseau logique", chemin: "/documents/projet_Fortins/SR Logique.png" },
+        { nom: "Schéma réseau physique", chemin: "/documents/projet_Fortins/SR Physique.png" },
+        { nom: "Table des systèmes", chemin: "/documents/projet_Fortins/Table des systèmes.pdf" },
+        { nom: "Test service DNS et DHCP", chemin: "/documents/projet_Fortins/Test serveur WebR.pdf" },
+        { nom: "Trello", chemin: "/documents/projet_Fortins/Trello.pdf" },
+      ],
+      dossiers: [
+        {
+          nom: "Fichiers de configuration",
+          documents: [
+            { nom: "apache2.conf", chemin: "/documents/projet_Fortins/apache2.conf" },
+            { nom: "default-ssl.conf", chemin: "/documents/projet_Fortins/default-ssl.conf" },
+            { nom: "000-default.conf", chemin: "/documents/projet_Fortins/000-default.conf" },
+            { nom: "index.php", chemin: "/documents/projet_Fortins/index.php" },
+          ],
+        },
+      ],
     },
     {
       id: 4,
@@ -301,22 +321,12 @@ const Projets = () => {
     //  { nom: "FRP Veille informatique", chemin: "/documents/projet_Veille_et_identité/FRP Veille et Identité Professionnel.pdf" },
     //],
     //},
+
     {
       id: 5,
-      titre: "Gestion de l'idendité professionnelle",
-      description: "FRP Validant les conpentences à propos de la gestion de mon identité professionnelle",
-      image: "/images/identité_pro.png",
-      technologies: ["LinkedIn"],
-      sousCompetences: ["1.6.3"],
-      documents: [
-        { nom: "FRP identité professionnelle", chemin: "/documents/projet_Identité_pro/FRP Identité pro Robin Longuet.pdf" },
-      ],
-    },
-    {
-      id: 6,
       titre: "Serva",
       description: "Mise en place de l'application Serva pour en faire un serveur PXE",
-      image: "/images/serva.png",
+      image: "/images/serva2.png",
       technologies: ["Serva", "PXE"],
       sousCompetences: ["1.5.2"],
       documents: [
@@ -325,11 +335,22 @@ const Projets = () => {
       ],
     },
     {
+      id: 6,
+      titre: "Gestion de l'idendité professionnelle",
+      description: "FRP Validant les conpentences à propos de la gestion de mon identité professionnelle",
+      image: "/images/identité_pro2.png",
+      technologies: ["LinkedIn"],
+      sousCompetences: ["1.6.3"],
+      documents: [
+        { nom: "FRP identité professionnelle", chemin: "/documents/projet_Identité_pro/FRP Identité pro Robin Longuet.pdf" },
+      ],
+    },
+    {
       id: 7,
       titre: "Présence en ligne du SDIS 33",
       description: "FRP Montrant la présence en ligne du SDIS 33 sur les differentes plateformes, Web et Réseaux Sociaux",
-      image: "/images/presence_en_ligne.png",
-      technologies: ["HTTPS", "LinkedIn", "Instagram", "Facebook", "Youtube"],
+      image: "/images/presence.png",
+      technologies: [],
       sousCompetences: ["1.3.2"],
       documents: [
         { nom: "La présence en ligne du SDIS 33", chemin: "/documents/projet_présence_en_ligne/presence en ligne.pdf" },
