@@ -13,7 +13,7 @@ const Certificat = () => {
       nom: "Atelier RGPD",
       description: "",
       pdf: "/Attestation_MOOC_CNIL.pdf",
-      logo: "https://www.cnil.fr/sites/default/files/atoms/image/logo_cnil_2021.png",
+      logo: "/atelierrgpd.png",
       couleur: "from-blue-500 to-blue-700",
       initiale: "CNIL",
     },
@@ -22,7 +22,7 @@ const Certificat = () => {
       nom: "SecNum Académie",
       description: "",
       pdf: "/Attestation_ANSSI.pdf",
-      logo: "https://www.ssi.gouv.fr/uploads/2020/01/anssi-logo-2019.png",
+      logo: "/secnum.png",
       couleur: "from-red-600 to-red-800",
       initiale: "ANSSI",
     },
@@ -31,7 +31,7 @@ const Certificat = () => {
       nom: "NetAcad",
       description: "",
       pdf: "/Attestation_Netacad.pdf",
-      logo: "https://www.netacad.com/sites/default/files/2020-09/cisco-netacad-logo.png",
+      logo: "/cisco.png",
       couleur: "from-cyan-500 to-cyan-700",
       initiale: "CISCO",
     },
@@ -68,7 +68,7 @@ const Certificat = () => {
               onClick={() => handleLogoClick(certificat.pdf)}
             >
               <div className="flex flex-col items-center text-center">
-                <div className={`w-32 h-32 rounded-lg bg-gradient-to-br ${certificat.couleur} p-4 mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 relative`}>
+                <div className="w-32 h-32 mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 relative">
                   {!logoErrors[certificat.id] ? (
                     <img
                       src={certificat.logo}
@@ -79,7 +79,7 @@ const Certificat = () => {
                       }}
                     />
                   ) : (
-                    <div className="text-white text-2xl font-bold text-center">
+                    <div className="text-foreground text-2xl font-bold text-center">
                       {certificat.initiale}
                     </div>
                   )}

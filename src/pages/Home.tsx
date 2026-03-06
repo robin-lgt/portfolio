@@ -75,7 +75,7 @@ const Home = () => {
               je développe des compétences techniques en administration systèmes et réseaux, virtualisation, et sécurité informatique.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-6">
-              Je suis à coté en alternance au SDIS (Service Départemental d'Incendie et de Secours) de la Gironde à Bordeaux où je participe à la gestion des serveurs au BHI (Bureau Hébergement des Infrastructures).
+              Je suis à coté en alternance au SDIS (Service Départemental d'Incendie et de Secours) de la Gironde à Bordeaux où je participe à l'administration des serveurs au BHI (Bureau Hébergement des Infrastructures).
             </p>
             <p className="text-muted-foreground leading-relaxed">
               J'ai pour Objectif l'année prochaine de rejoindre la License Pro ADSILLH à l'université de Bordeaux, ésperant pouvoir rester dans mon entreprise.
