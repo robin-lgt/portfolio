@@ -280,7 +280,7 @@ const Projets = () => {
     {
       id: 4,
       titre: "Navajo",
-      description: "Dans le contexte de l'entreprise GSB, nous avons mis en place avec mes camarades une infrastructure réseau composé de 3 sous réseaux dont une DMZ, 2 pfSense, ainsi que 3 serveurs, qui fournissent des services comme DHCP, DNS, Serveur WEB, ainsi qu'une PKI",
+      description: "Dans le contexte de l'entreprise GSB, nous avons mis en place avec mes camarades une infrastructure réseau composé de VLAN avec du routage inter-vlan,de 3 sous réseaux dont une DMZ, 1 pfSense, ainsi que 3 serveurs, qui fournissent des services comme DHCP, DNS, Serveur WEB, ainsi qu'une PKI",
       image: "/images/navajo.png", // Chemin vers votre image
       technologies: ["DHCP", "DNS Bind"],
       sousCompetences: ["1.4.2", "1.5.1", "1.5.2",],
